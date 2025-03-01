@@ -8,18 +8,26 @@ import (
 	"os"
 )
 
+/*
+	Handler function for /
+*/
 func getRoot(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("got / request\n")
 	io.WriteString(w, "This is my website!\n")
 }
 
+/*
+	Handler function for /hello
+*/
 func getHello(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("got /hello request\n")
 	io.WriteString(w, "Hello HTTP!\n")
 }
 
 func main() {
+	// make own custom HTTP request mux(multiplexer)
     mux := http.NewServeMux()
+	// register handler functions for given patterns
 	mux.HandleFunc("/", getRoot)
 	mux.HandleFunc("/hello", getHello)
 
