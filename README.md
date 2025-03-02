@@ -1,3 +1,5 @@
-# http practice
+# EC2 Docker Practice
 
-hands-on practice with [this blog post](https://www.digitalocean.com/community/tutorials/how-to-make-an-http-server-in-go) from digital ocean
+practice repo for deploying Go app onto AWS EC2 with docker and github action
+
+Go app source code is cloned from [this](https://github.com/obzva/http-practice)
